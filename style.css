@@ -1,0 +1,355 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    --twitter-color: #1DA1F2;
+    --twitter-background: #e6ecf0;
+    display: flex;
+    height: 100vh;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+/* sidebar */
+
+.sidebarOption{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sidebarOption .material-icons, .fa-twitter{
+    padding: 12px;
+}
+
+.sidebarOption h2{
+    font-weight: 900;
+    font-size: 20px;
+    margin-right: 20px;
+
+}
+
+.sidebarOption:hover{
+    background-color: var(--twitter-background);
+    border-radius: 30px;
+    color: var(--twitter-color);
+    transition: color 100ms ease-out;
+}
+
+.sidebarOption.active{
+    color: var(--twitter-color);
+}
+
+.sidebar_tweet{
+    width: 90%;
+    background-color: var(--twitter-color);
+    border:none;
+    color: white;
+    font-weight: 900;
+    border-radius: 30px;
+    height: 50px;
+    margin-top: 20px;
+
+}
+
+.sidebar{
+    border-right: 1px solid var(--twitter-background);
+    flex: 0.195;
+    min-width: 230px;
+    
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+.fa-twitter{
+    color: var(--twitter-color);
+    font-size: 30px;
+}
+
+.material-icons{
+    font-size: 32px;
+}
+
+
+/* TIMELINE */
+
+.tHeader{
+    display: flex;
+padding-top: 10px;
+padding-left: 10px;
+}
+.tweetst h5{
+    padding-left: 55px;
+    font-weight: 200;
+    cursor: pointer;
+}
+.tHeader .material-icons{
+    padding-right: 20px;
+    padding-top: 4px;
+    color: var(--twitter-color);
+    font-size: 25px;
+    cursor: pointer;
+}
+.tHeader h2{
+    font-weight: 900;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.tweetst{
+    border-bottom: 1.5px solid var(--twitter-background);
+}
+.timeline{
+    border-right: 1.5px solid var(--twitter-background);
+    min-width: fit-content;
+    overflow-y: scroll;
+    flex: 0.5;
+    position: relative;
+    height: fit-content;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    min-width:none;
+}
+.timeline::-webkit-scrollbar{
+   display: none;
+}
+
+.header_top{
+    border: 1px solid var(--twitter-background);
+    padding: 1px 20px;
+    background-color: white;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+}
+
+
+.pfp img{
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    top: 178px;
+    margin-left: 18px;
+    border-radius: 50%;
+    border: 2px solid rgb(236, 234, 234);
+    cursor: pointer;
+}
+
+
+.name{
+    padding-left: 17px;
+    padding-top: 50px;
+    font-size: 24px;
+    font-weight: 900;
+    position:absolute;
+    cursor: pointer;
+} 
+.morebtn, .msgbtn{
+    border-radius: 50%;
+    color: var(--twitter-color);
+    background: transparent;
+    border: 0.5px solid var(--twitter-color);
+    height: 40px;
+    width: 40px;
+
+}
+
+.followbtn{
+    border-radius: 30px;
+    color: var(--twitter-color);
+    background: transparent;
+    border: 0.5px solid var(--twitter-color);
+    height: 40px;
+    padding: 0px 15px;
+
+
+}
+
+.tlbtn .material-icons {
+    font-weight: 100;
+    font-size: 25px;
+
+}
+.tlbtn{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+.msg, .more, .follow{
+    padding: 0px 6px;
+}
+.username{
+    padding-top: 37px;
+    padding-left: 18px;
+    font-size: 14px;
+    color: rgb(116,114,114);
+    font-weight: 300;
+    cursor: pointer;
+}
+.msgbtn:hover, .morebtn:hover, .followbtn:hover{
+    background-color: var(--twitter-background);
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.bio{
+padding-top: 20px;
+padding-left: 17px;
+}
+.bio a{
+    text-decoration: none;
+    color: var(--twitter-color);
+    }
+    .bio a:hover{
+        text-decoration: underline;
+    }
+    .bio p{
+        color:rgb(70,70,70);
+        font-weight: 300;
+    }
+    .biologos{
+        display: flex;
+        padding-left: 20px;
+        padding-top: 15px;
+        
+    }
+    .loclog, .linklog, .callog{
+        display: flex;
+        padding: 10px;
+    }
+    .biologos h4{
+        font-weight: 100;
+        color: rgb(112, 111, 111);
+
+    }
+    .fa, .fas, .far{
+        padding-right: 5px;
+        color: rgb(112, 111, 111);
+    }
+    .linklog a{
+        text-decoration: none;
+        color: var(--twitter-color);
+     }
+     .linklog a:hover{
+         text-decoration: underline;
+     }
+     .follow1, .following, .followers{
+         display: flex;
+     }
+     .follow1{
+        padding-top: 10px;
+        padding-left: 17px;
+    }
+    .following, .followers{
+        padding-right: 11px;
+    }
+
+.folnum{
+    padding-right: 3px;
+    font-weight: 900;
+}
+.folstat{
+    font-weight: 200;
+    color:rgb(112, 111, 111)
+}
+.common{
+    padding-top: 15px;
+    padding-left: 17px;
+
+}
+.common p{
+    color:rgb(112, 111, 111);
+    font-weight: 100;
+}
+.feed{
+    display: flex;
+    padding-top: 30px;
+    border-bottom: 1.5px solid var(--twitter-background);
+}
+.tweets1, .replies, .media, .likes{
+   font-size: 16px;
+   color:rgb(112, 111, 111);
+   font-weight: 900;
+
+}
+.tweets1:hover, .replies:hover, .media:hover, .likes:hover{
+    background-color: var(--twitter-background);
+    color: var(--twitter-color);
+    transition: color 100ms ease-out;
+}
+.feed button{
+    height: 45px;
+    padding: 0 40px;
+    background: transparent;
+    border: none;
+}
+.embed{
+    margin: 0 50px;
+}
+
+
+    /* SIDEBAR RIGHT */
+
+    .sidbr{
+        flex: 0.35;
+    }
+    .searchsbr{
+        display: flex;
+        align-items: center;
+        background-color: var(--twitter-background);
+        padding: 5px;
+        border-radius: 20px;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    .searchsbr input{
+        border: none;
+        background-color: var(--twitter-background);
+        outline: none;
+    }
+.wigets__searchIcon{
+    color: gray;
+}
+   .sidecnt h2{
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 10px;
+   }
+   .sidecnt{
+      margin-top: 15px;
+      margin-left: 20px;
+      padding: 20px;
+      background-color: #f5f8fa;
+      border-radius: 15px;
+ }
+     /* RESPONSIVENESS */
+     @media only screen and (max-width: 1250px){
+         .sidebar h2{
+             display: none;
+         }
+         .sidebar, .material-icons{
+             text-align: center;
+             padding-right: 20px;
+             min-width: 0;
+             flex: none;
+         }
+     }
+     @media only screen and (max-width: 700px){
+         .sidbr{
+             display: none;
+         }
+     }
+     @media only screen and (max-width: 470px){
+         .menuoption{
+             display: none;
+         }
+     }
+
+     
